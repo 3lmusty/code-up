@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeUp Labs 6-Week Bootcamp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.jpg">
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .slide-down {
+      max-height: 500px;
+      opacity: 1;
+      visibility: visible;
+      transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+    }
+    .slide-up {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in, opacity 0.3s ease-in;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+<!-- Navbar -->
+<header class="bg-white shadow sticky top-0 z-50 fade-in">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <img src="images/logo.jpg" alt="Staph-Tech Logo" class="w-10 h-10">
+      <span class="font-bold text-xl text-purple-800">CodeUp Labs</span>
+    </div>
+    <button id="menuToggle" class="md:hidden focus:outline-none">
+      <svg class="w-7 h-7 text-purple-800" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <nav class="hidden md:flex space-x-6 font-medium">
+      <a href="#" class="hover:text-purple-700 transition-colors duration-300">Home</a>
+      <a href="#register" class="hover:text-purple-700 transition-colors duration-300">Register</a>
+      <a href="#contact" class="hover:text-purple-700 transition-colors duration-300">Contact</a>
+    </nav>
+  </div>
+  <div id="mobileMenu" class="md:hidden slide-up absolute w-full bg-white px-4 pb-4 space-y-3 font-medium shadow-md z-50">
+    <a href="#" class="block hover:text-purple-700">Home</a>
+    <a href="#register" class="block hover:text-purple-700">Register</a>
+    <a href="#contact" class="block hover:text-purple-700">Contact</a>
+  </div>
+</header>
+<div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 md:hidden"></div>
+
+<!-- Hero Section -->
+<section class="bg-purple-800 text-white py-16 px-6 text-center fade-in">
+  <h1 class="text-4xl font-bold mb-4">CodeUp Labs</h1>
+  <p class="text-lg mb-2">6-Week Coding Bootcamp for Kids & Adults</p>
+  <p class="mb-4">Learn. Build. Launch.</p>
+  <p class="mb-2">📅 Starts: <strong>July 21, 2025</strong> &nbsp; 💻 Hybrid: Physical & Online</p>
+  <p class="mb-6">💰 Fee: ₦25,000 <span class="line-through">₦30,000</span> <em>(₦20,000 Early Bird)</em></p>
+  <a href="#register" class="inline-block bg-white text-purple-800 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition-transform duration-300 hover:scale-105">Enroll Now</a>
+</section>
+
+<!-- What You'll Learn -->
+<section class="py-12 px-6 max-w-4xl mx-auto fade-in">
+  <h2 class="text-2xl font-bold mb-4 text-center">What You'll Learn</h2>
+  <ul class="list-disc list-inside text-lg space-y-2">
+    <li class="transition duration-300 hover:text-purple-700">Build websites using HTML, CSS & JavaScript</li>
+    <li class="transition duration-300 hover:text-purple-700">Create real-life projects (portfolio, web apps)</li>
+    <li class="transition duration-300 hover:text-purple-700">Collaborate with Git & GitHub</li>
+    <li class="transition duration-300 hover:text-purple-700">Deploy live sites with Netlify</li>
+    <li class="transition duration-300 hover:text-purple-700">Earn a certificate & present your work</li>
+  </ul>
+</section>
+
+<!-- Week-by-Week Schedule -->
+<section class="bg-gray-100 py-12 px-6 fade-in">
+  <h2 class="text-2xl font-bold text-center mb-6">6-Week Bootcamp Curriculum</h2>
+  <div class="grid md:grid-cols-2 gap-6 text-lg">
+    <div class="hover:scale-105 transition-transform duration-300"><strong>Week 1:</strong> Intro to HTML & Web Structure</div>
+    <div class="hover:scale-105 transition-transform duration-300"><strong>Week 2:</strong> CSS Styling & Layouts (Flexbox)</div>
+    <div class="hover:scale-105 transition-transform duration-300"><strong>Week 3:</strong> JavaScript Fundamentals</div>
+    <div class="hover:scale-105 transition-transform duration-300"><strong>Week 4:</strong> Real Projects & Portfolio</div>
+    <div class="hover:scale-105 transition-transform duration-300"><strong>Week 5:</strong> GitHub + Netlify Hosting</div>
+    <div class="hover:scale-105 transition-transform duration-300"><strong>Week 6:</strong> Final Project & Certificate</div>
+  </div>
+</section>
+
+<!-- Who Can Join -->
+<section class="py-12 px-6 max-w-3xl mx-auto fade-in">
+  <h2 class="text-2xl font-bold text-center mb-4">Who Can Join?</h2>
+  <p class="text-lg mb-2">✅ Kids (Ages 8+) Fun & beginner-friendly</p>
+  <p class="text-lg mb-2">✅ Teens & Adults Hobbyists, career switchers, tech explorers</p>
+  <p class="text-lg">No experience required!</p>
+</section>
+
+<!-- Online Requirements Section -->
+<section class="py-12 px-6 max-w-3xl mx-auto fade-in">
+  <h2 class="text-2xl font-bold text-center mb-4">Requirements for Online Participants</h2>
+  <button id="toggleRequirements" class="mx-auto block text-purple-700 hover:text-purple-900 font-semibold mb-4 text-lg transition duration-300">
+    🔽 Show Requirements
+  </button>
+  <div id="requirementsList" class="hidden space-y-3 text-lg">
+    <div class="flex items-start space-x-2"><span>✅</span><p>A functional laptop with good battery life</p></div>
+    <div class="flex items-start space-x-2"><span>✅</span><p>Stable internet connection</p></div>
+    <div class="flex items-start space-x-2"><span>✅</span><p>Install <a href="https://zoom.us/download" target="_blank" class="text-purple-700 underline hover:text-purple-900">Zoom</a></p></div>
+    <div class="flex items-start space-x-2"><span>✅</span><p>Install <a href="https://code.visualstudio.com/download" target="_blank" class="text-purple-700 underline hover:text-purple-900">Visual Studio Code</a></p></div>
+    <div class="flex items-start space-x-2"><span>✅</span><p>Sign up on <a href="https://github.com/signup" target="_blank" class="text-purple-700 underline hover:text-purple-900">GitHub</a></p></div>
+    <div class="flex items-start space-x-2"><span>✅</span><p>Download <a href="https://desktop.github.com/" target="_blank" class="text-purple-700 underline hover:text-purple-900">GitHub Desktop</a></p></div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section id="register" class="bg-purple-700 text-white py-12 px-6 text-center fade-in">
+  <h2 class="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+  <p class="mb-2">📍 Hybrid Classes (Physical + Online)</p>
+  <p class="mb-2">📅 Starts: July 21, 2025</p>
+  <p class="mb-4">💵 Fee: ₦25,000 <em>(₦20,000 Early Bird)</em></p>
+  <a href="https://wa.me/2349036117529" target="_blank" class="bg-white text-purple-800 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-transform duration-300 hover:scale-105">Register via WhatsApp</a>
+</section>
+
+<!-- Contact -->
+<footer id="contact" class="bg-gray-900 text-white py-6 text-center fade-in">
+  <p class="mb-1">📞 +234 903 611 7529</p>
+  <p class="mb-1">📧 staphtechnology@gmail.com</p>
+  <p>Powered by Staph-Tech Solutions</p>
+</footer>
+
+<a href="https://wa.me/2349036117529" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 animate-bounce">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" class="w-12 h-12 drop-shadow-lg hover:scale-110 transition-transform" alt="WhatsApp Chat">
+</a>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuOverlay = document.getElementById('menuOverlay');
+  const toggleBtn = document.getElementById('toggleRequirements');
+  const requirementsList = document.getElementById('requirementsList');
+
+  function toggleMenu() {
+    const isOpen = mobileMenu.classList.contains('slide-down');
+    mobileMenu.classList.toggle('slide-down');
+    mobileMenu.classList.toggle('slide-up');
+    menuOverlay.classList.toggle('hidden');
+  }
+
+  menuToggle.addEventListener('click', toggleMenu);
+  menuOverlay.addEventListener('click', toggleMenu);
+
+  toggleBtn.addEventListener('click', () => {
+    requirementsList.classList.toggle('hidden');
+    toggleBtn.innerText = requirementsList.classList.contains('hidden')
+      ? '🔽 Show Requirements'
+      : '🔼 Hide Requirements';
+  });
+</script>
+
+</body>
+</html>
